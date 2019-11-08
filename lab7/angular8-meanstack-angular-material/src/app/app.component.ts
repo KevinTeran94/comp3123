@@ -12,7 +12,7 @@ export class AppComponent {
   @ViewChild('sidenav', {static: true}) sidenav: MatSidenav;
 
   ngOnInit() {
-    console.log(window.innerWidth)
+    console.log(window.innerWidth);
     if (window.innerWidth < 768) {
       this.sidenav.fixedTopGap = 55;
       this.opened = false;
@@ -28,7 +28,7 @@ export class AppComponent {
       this.sidenav.fixedTopGap = 55;
       this.opened = false;
     } else {
-      this.sidenav.fixedTopGap = 55
+      this.sidenav.fixedTopGap = 55;
       this.opened = true;
     }
   }

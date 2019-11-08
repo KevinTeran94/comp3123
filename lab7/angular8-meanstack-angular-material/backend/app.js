@@ -25,8 +25,8 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-material')));
-app.use('/', express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-material')));
+//app.use(express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-material')));
+//app.use('/', express.static(path.join(__dirname, 'dist/angular8-meanstack-angular-material')));
 app.use('/api', studentRoute)
 
 // Create port

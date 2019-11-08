@@ -17,7 +17,8 @@ export class ApiService {
 
   // Add student
   AddStudent(data: Student): Observable<any> {
-    let API_URL = `${this.endpoint}/add-student`;
+    console.log('addstudent!')
+    let API_URL = `http://localhost:4000/api/add-student`;
     return this.http.post(API_URL, data)
       .pipe(
         catchError(this.errorMgmt)
@@ -42,7 +43,7 @@ export class ApiService {
 
   // Update student
   UpdateStudent(id, data: Student): Observable<any> {
-    let API_URL = `${this.endpoint}/update/${id}`;
+    let API_URL = `${this.endpoint}/update-student/${id}`;
     return this.http.put(API_URL, data, { headers: this.headers }).pipe(
       catchError(this.errorMgmt)
     )

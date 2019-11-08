@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, NgZone } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
 import { ApiService } from './../../shared/api.service';
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 export interface Subject {
   name: string;
@@ -106,7 +106,7 @@ export class EditStudentComponent implements OnInit {
     var id = this.actRoute.snapshot.paramMap.get('id');
     if (window.confirm('Are you sure you want to update?')) {
       this.studentApi.UpdateStudent(id, this.studentForm.value).subscribe( res => {
-        this.ngZone.run(() => this.router.navigateByUrl('/students-list'))
+        this.ngZone.run(() => this.router.navigateByUrl('/students-list'));
       });
     }
   }
